@@ -1,0 +1,7 @@
+*~
+.DS_Store
+UserInterfaceState.xcuserstate
+Pods
+*.xcscheme
+Breakpoints_v2.xcbkptlist
+xcschememanagement.plist
