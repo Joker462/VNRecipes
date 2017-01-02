@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainContainerTabBarController: UITabBarController {
+class MainContainerTabBarController: BaseTabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +26,8 @@ class MainContainerTabBarController: UITabBarController {
 
 private extension MainContainerTabBarController {
     func initUI() {
-        tabBar.unselectedItemTintColor = UIColor(hex: ColorApp.tabBar)
-        tabBar.tintColor = UIColor(hex: ColorApp.tabBarSeleted)
-        tabBar.barTintColor = UIColor(hex: ColorApp.tabBarBackground, alpha: 0.7)
         
         guard let tabBarItems = tabBar.items else { return }
-        
         // Set image and title for tab bar item
         for i in 0..<tabBarItems.count {
             tabBarItems[i].title = StaticData.sharedInstance.getTabBarData()[i].name

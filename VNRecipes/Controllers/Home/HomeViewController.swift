@@ -17,6 +17,11 @@ class HomeViewController: BaseViewController {
     
     override func initUI() {
         super.initUI()
+        guard let item = tabBarController?.tabBar.items?[0] else {
+            return
+        }
+        title = item.title
+        
     }
 
 }

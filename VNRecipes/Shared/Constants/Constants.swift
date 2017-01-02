@@ -44,8 +44,12 @@ struct DeviceType {
 
 // Color
 struct ColorApp {
-    static let tabBarSeleted            =   "#FF9401"
-    static let tabBar                   =   "#FFFFFF"
-    static let tabBarBackground         =   "#1B1B1B"           // Alpha 70%
-    static let backgroundController     =   "#000000"
+    static let tabBarIconSeleted                =   "#FF9401"
+    static let tabBarIconUnselect               =   "#FFFFFF"
+    static let tabBarBackground                 =   "#1B1B1B"     // Alpha 70%
+    static let navigationBarBackground          =   "#1B1B1B"     // Alpha 70%
+    static let navigationBarIcon                =   "#FFFFFF"
+    static let navigationBarTitle               =   "#FFFFFF"
+    static let borderView                       =   "#FFFFFF"
+    static let backgroundController             =   "#000000"
 }

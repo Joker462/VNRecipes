@@ -16,7 +16,7 @@ extension UIView {
     }
     
     
-    func addBorder(borderType: Border, weightBorder: CGFloat = 1.0 ,colorBorder: UIColor = UIColor(hex: ColorApp.tabBar)) {
+    func addBorder(borderType: Border, weightBorder: CGFloat = 1.0 ,colorBorder: UIColor = UIColor(hex: ColorApp.borderView)) {
         
         let borderLayer = CAShapeLayer()
         switch borderType {
