@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  VNRecipes
+
+  Created by Hung Thai Minh on 12/29/16.
+  Copyright © 2016 Hung Thai. All rights reserved.
+*/
+
+
+// TABBAR
+"recipes"="Recipes";
+"how-to"="How To";
+"health"="Health";
+"account"="Account";
+"search"="Search";
