@@ -32,7 +32,7 @@ class RESTContants: NSObject {
   static let MethodNotAllowed                   = 405
   
   //MARK: Webservice url
-  static let Hostname                           = "demo7638363.mockable.io"
-  static let BaseURL                            = "http://demo7638363.mockable.io"
+  static let Hostname                           = "demo6019678.mockable.io"
+  static let BaseURL                            = "http://demo6019678.mockable.io"
   
 }

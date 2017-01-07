@@ -70,6 +70,24 @@
 		F37A6D3A1E17F75F007E0591 /* RESTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37A6D2F1E17F75F007E0591 /* RESTResponse.swift */; };
 		F37A6D3B1E17F75F007E0591 /* RESTResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37A6D2F1E17F75F007E0591 /* RESTResponse.swift */; };
 		F3B1991E1DF3FE32000D746F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD507E2C1DE82A9B00E57F48 /* LaunchScreen.storyboard */; };
+		F3E0F6091E213739006DC55B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6081E213739006DC55B /* Recipe.swift */; };
+		F3E0F60A1E213739006DC55B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6081E213739006DC55B /* Recipe.swift */; };
+		F3E0F60D1E2137FF006DC55B /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F60C1E2137FF006DC55B /* RecipeAPI.swift */; };
+		F3E0F60E1E2137FF006DC55B /* RecipeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F60C1E2137FF006DC55B /* RecipeAPI.swift */; };
+		F3E0F6121E2142E6006DC55B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6111E2142E6006DC55B /* BaseCollectionViewCell.swift */; };
+		F3E0F6131E2142E6006DC55B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6111E2142E6006DC55B /* BaseCollectionViewCell.swift */; };
+		F3E0F6151E2142F5006DC55B /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6141E2142F5006DC55B /* BaseTableViewCell.swift */; };
+		F3E0F6161E2142F5006DC55B /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6141E2142F5006DC55B /* BaseTableViewCell.swift */; };
+		F3E0F6191E214329006DC55B /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6171E214329006DC55B /* RecipeCell.swift */; };
+		F3E0F61A1E214329006DC55B /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6171E214329006DC55B /* RecipeCell.swift */; };
+		F3E0F61B1E214329006DC55B /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E0F6181E214329006DC55B /* RecipeCell.xib */; };
+		F3E0F61C1E214329006DC55B /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E0F6181E214329006DC55B /* RecipeCell.xib */; };
+		F3E0F61E1E215FF6006DC55B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F61D1E215FF6006DC55B /* UITableView.swift */; };
+		F3E0F61F1E215FF6006DC55B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F61D1E215FF6006DC55B /* UITableView.swift */; };
+		F3E0F6211E2162B7006DC55B /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6201E2162B7006DC55B /* UICollectionView.swift */; };
+		F3E0F6221E2162B7006DC55B /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6201E2162B7006DC55B /* UICollectionView.swift */; };
+		F3E0F6241E216533006DC55B /* HomeViewControllerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6231E216533006DC55B /* HomeViewControllerLayout.swift */; };
+		F3E0F6251E216533006DC55B /* HomeViewControllerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E0F6231E216533006DC55B /* HomeViewControllerLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +131,15 @@
 		F37A6D2F1E17F75F007E0591 /* RESTResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTResponse.swift; sourceTree = "<group>"; };
 		F3B199241DF3FE32000D746F /* VNRecipes Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VNRecipes Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B199251DF3FE32000D746F /* VNRecipes Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VNRecipes Dev-Info.plist"; path = "/Users/joker/Documents/projectIOS/SourceTree/VNRecipes/VNRecipes Dev-Info.plist"; sourceTree = "<absolute>"; };
+		F3E0F6081E213739006DC55B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		F3E0F60C1E2137FF006DC55B /* RecipeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
+		F3E0F6111E2142E6006DC55B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		F3E0F6141E2142F5006DC55B /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		F3E0F6171E214329006DC55B /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		F3E0F6181E214329006DC55B /* RecipeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
+		F3E0F61D1E215FF6006DC55B /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		F3E0F6201E2162B7006DC55B /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		F3E0F6231E216533006DC55B /* HomeViewControllerLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewControllerLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +228,8 @@
 		F34C73DA1E15524D005C4D99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F3E0F6101E2142CF006DC55B /* Base */,
+				F3E0F60F1E21429C006DC55B /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +281,8 @@
 				F3783D521E1A0BD5005FFBED /* UIColor.swift */,
 				F3783D551E1A1139005FFBED /* UIView.swift */,
 				F3783D581E1A1A86005FFBED /* DispatchQueue.swift */,
+				F3E0F61D1E215FF6006DC55B /* UITableView.swift */,
+				F3E0F6201E2162B7006DC55B /* UICollectionView.swift */,
 			);
 			name = Extensions;
 			path = Extentions;
@@ -288,6 +319,7 @@
 				F34C73F31E1561AA005C4D99 /* HomeViewController.swift */,
 				F3783D4E1E1A0185005FFBED /* MainContainerTabBarController.swift */,
 				F3783D651E1A3BCC005FFBED /* HomeNavigationController.swift */,
+				F3E0F6231E216533006DC55B /* HomeViewControllerLayout.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -295,6 +327,7 @@
 		F3783D471E19F4EF005FFBED /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F3E0F6081E213739006DC55B /* Recipe.swift */,
 				F3783D4B1E19F6D3005FFBED /* TabBarObject.swift */,
 			);
 			path = Home;
@@ -361,6 +394,7 @@
 		F37A6D251E17F57D007E0591 /* Webservices */ = {
 			isa = PBXGroup;
 			children = (
+				F3E0F60B1E2137EC006DC55B /* Home */,
 				F37A6D291E17F747007E0591 /* Base */,
 			);
 			path = Webservices;
@@ -383,6 +417,32 @@
 				F37A6D2D1E17F75F007E0591 /* RESTParam.swift */,
 				F37A6D2E1E17F75F007E0591 /* RESTRequest.swift */,
 				F37A6D2F1E17F75F007E0591 /* RESTResponse.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F3E0F60B1E2137EC006DC55B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F3E0F60C1E2137FF006DC55B /* RecipeAPI.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F3E0F60F1E21429C006DC55B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F3E0F6171E214329006DC55B /* RecipeCell.swift */,
+				F3E0F6181E214329006DC55B /* RecipeCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F3E0F6101E2142CF006DC55B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F3E0F6111E2142E6006DC55B /* BaseCollectionViewCell.swift */,
+				F3E0F6141E2142F5006DC55B /* BaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -477,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F34C73FA1E156947005C4D99 /* Localizable.strings in Resources */,
+				F3E0F61B1E214329006DC55B /* RecipeCell.xib in Resources */,
 				CD507E2E1DE82A9B00E57F48 /* LaunchScreen.storyboard in Resources */,
 				F34C73E81E1558E6005C4D99 /* Main.storyboard in Resources */,
 				F34C73EE1E1558FB005C4D99 /* Assets.xcassets in Resources */,
@@ -490,6 +551,7 @@
 			files = (
 				F3B1991E1DF3FE32000D746F /* LaunchScreen.storyboard in Resources */,
 				F34C73FB1E156947005C4D99 /* Localizable.strings in Resources */,
+				F3E0F61C1E214329006DC55B /* RecipeCell.xib in Resources */,
 				F34C73F61E15668F005C4D99 /* Assets.xcassets in Resources */,
 				F34C73F01E155F9A005C4D99 /* Main.storyboard in Resources */,
 			);
@@ -597,9 +659,12 @@
 			files = (
 				F3783D4C1E19F6D3005FFBED /* TabBarObject.swift in Sources */,
 				F37A6D381E17F75F007E0591 /* RESTRequest.swift in Sources */,
+				F3E0F6241E216533006DC55B /* HomeViewControllerLayout.swift in Sources */,
 				F34C74031E156B00005C4D99 /* Constants.swift in Sources */,
+				F3E0F6191E214329006DC55B /* RecipeCell.swift in Sources */,
 				F3783D591E1A1A86005FFBED /* DispatchQueue.swift in Sources */,
 				F37A6D301E17F75F007E0591 /* RESTContants.swift in Sources */,
+				F3E0F6121E2142E6006DC55B /* BaseCollectionViewCell.swift in Sources */,
 				F3783D5D1E1A3223005FFBED /* BaseViewController.swift in Sources */,
 				F3783D631E1A3964005FFBED /* BaseTabBarController.swift in Sources */,
 				F37A6D321E17F75F007E0591 /* RESTError.swift in Sources */,
@@ -609,16 +674,21 @@
 				F3783D4F1E1A0185005FFBED /* MainContainerTabBarController.swift in Sources */,
 				F37A6D361E17F75F007E0591 /* RESTParam.swift in Sources */,
 				F3783D6D1E1A3D95005FFBED /* HowToViewController.swift in Sources */,
+				F3E0F6211E2162B7006DC55B /* UICollectionView.swift in Sources */,
 				F3783D661E1A3BCC005FFBED /* HomeNavigationController.swift in Sources */,
 				F34C74001E156A20005C4D99 /* UIViewController.swift in Sources */,
 				F3783D701E1A3DCC005FFBED /* SearchViewController.swift in Sources */,
 				F37A6D3A1E17F75F007E0591 /* RESTResponse.swift in Sources */,
 				F34C74091E156C63005C4D99 /* String.swift in Sources */,
+				F3E0F6151E2142F5006DC55B /* BaseTableViewCell.swift in Sources */,
 				F37A6D341E17F75F007E0591 /* RESTMultipart.swift in Sources */,
+				F3E0F60D1E2137FF006DC55B /* RecipeAPI.swift in Sources */,
 				F3783D561E1A1139005FFBED /* UIView.swift in Sources */,
 				F3783D531E1A0BD5005FFBED /* UIColor.swift in Sources */,
 				F3783D491E19F518005FFBED /* BaseObject.swift in Sources */,
+				F3E0F6091E213739006DC55B /* Recipe.swift in Sources */,
 				F37A6D281E17F679007E0591 /* StaticData.swift in Sources */,
+				F3E0F61E1E215FF6006DC55B /* UITableView.swift in Sources */,
 				F34C74061E156B8B005C4D99 /* UILabel.swift in Sources */,
 				F3783D731E1A3DFB005FFBED /* HealthViewController.swift in Sources */,
 				F34C73F41E1561AA005C4D99 /* HomeViewController.swift in Sources */,
@@ -631,9 +701,12 @@
 			files = (
 				F34C74041E156B00005C4D99 /* Constants.swift in Sources */,
 				F34C73EF1E155F88005C4D99 /* AppDelegate.swift in Sources */,
+				F3E0F6251E216533006DC55B /* HomeViewControllerLayout.swift in Sources */,
 				F3783D5A1E1A1A86005FFBED /* DispatchQueue.swift in Sources */,
+				F3E0F61A1E214329006DC55B /* RecipeCell.swift in Sources */,
 				F37A6D331E17F75F007E0591 /* RESTError.swift in Sources */,
 				F37A6D3B1E17F75F007E0591 /* RESTResponse.swift in Sources */,
+				F3E0F6131E2142E6006DC55B /* BaseCollectionViewCell.swift in Sources */,
 				F3783D5E1E1A3223005FFBED /* BaseViewController.swift in Sources */,
 				F3783D641E1A3964005FFBED /* BaseTabBarController.swift in Sources */,
 				F34C74011E156A20005C4D99 /* UIViewController.swift in Sources */,
@@ -643,16 +716,21 @@
 				F34C740A1E156C63005C4D99 /* String.swift in Sources */,
 				F37A6D311E17F75F007E0591 /* RESTContants.swift in Sources */,
 				F3783D6E1E1A3D95005FFBED /* HowToViewController.swift in Sources */,
+				F3E0F6221E2162B7006DC55B /* UICollectionView.swift in Sources */,
 				F3783D671E1A3BCC005FFBED /* HomeNavigationController.swift in Sources */,
 				F3783D511E1A058D005FFBED /* StaticData.swift in Sources */,
 				F3783D711E1A3DCC005FFBED /* SearchViewController.swift in Sources */,
 				F34C74071E156B8B005C4D99 /* UILabel.swift in Sources */,
 				F37A6D351E17F75F007E0591 /* RESTMultipart.swift in Sources */,
+				F3E0F6161E2142F5006DC55B /* BaseTableViewCell.swift in Sources */,
 				F34C73F51E1561AA005C4D99 /* HomeViewController.swift in Sources */,
+				F3E0F60E1E2137FF006DC55B /* RecipeAPI.swift in Sources */,
 				F3783D571E1A1139005FFBED /* UIView.swift in Sources */,
 				F3783D541E1A0BD5005FFBED /* UIColor.swift in Sources */,
 				F3783D4A1E19F518005FFBED /* BaseObject.swift in Sources */,
+				F3E0F60A1E213739006DC55B /* Recipe.swift in Sources */,
 				F37A6D371E17F75F007E0591 /* RESTParam.swift in Sources */,
+				F3E0F61F1E215FF6006DC55B /* UITableView.swift in Sources */,
 				F3783D4D1E19F6D3005FFBED /* TabBarObject.swift in Sources */,
 				F3783D741E1A3DFB005FFBED /* HealthViewController.swift in Sources */,
 				F37A6D391E17F75F007E0591 /* RESTRequest.swift in Sources */,

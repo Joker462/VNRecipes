@@ -42,6 +42,11 @@ struct DeviceType {
     static let IPAD              = UIDevice.current.userInterfaceIdiom == .pad   && Screen.MAX == 1024.0
 }
 
+// Cells identifier
+struct CellIdentifier {
+    static let recipe               =           "RecipeCell"
+}
+
 // Color
 struct ColorApp {
     static let tabBarIconSeleted                =   "#FF9401"
@@ -53,3 +58,5 @@ struct ColorApp {
     static let borderView                       =   "#FFFFFF"
     static let backgroundController             =   "#000000"
 }
+
+

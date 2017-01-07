@@ -9,6 +9,12 @@
 import Foundation
 
 extension String {
+    
+    static func className(aClass: AnyClass) -> String {
+        
+        return NSStringFromClass(aClass).components(separatedBy: ".").last!
+    }
+    
     var localized: String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
     }
