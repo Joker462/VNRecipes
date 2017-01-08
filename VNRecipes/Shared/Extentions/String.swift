@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     
@@ -21,5 +22,13 @@ extension String {
     
     var length: Int {
         return self.characters.count
+    }
+    
+    
+    func convertToCGFloat() -> CGFloat {
+        if let number = NumberFormatter().number(from: self) {
+            return CGFloat(number)
+        }
+        return 0.0
     }
 }

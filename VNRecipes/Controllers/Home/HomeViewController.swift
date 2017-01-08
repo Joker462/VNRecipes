@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomeViewController: BaseViewController {
 
     @IBOutlet weak var recipeCollectionView: UICollectionView!
     var recipes: [Recipe]?
     
-    let cellSize = CGSize(width: Screen.WIDTH/2 - 2, height: Screen.WIDTH/2)
+    let cellSize = CGSize(width: Screen.WIDTH/2 - 10, height: Screen.WIDTH/2)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +31,15 @@ class HomeViewController: BaseViewController {
         
         recipeCollectionView.backgroundColor = UIColor.clear
         recipeCollectionView.registerCellNib(anyClass: RecipeCell.self)
-        let layout = HomeViewControllerLayout()
-        recipeCollectionView.collectionViewLayout = layout
+    
+//        let flowLayout = HomeViewControllerLayout()
+//        recipeCollectionView.collectionViewLayout = flowLayout
         
+        // Set controller as delegate for layout
+        if let layout = recipeCollectionView?.collectionViewLayout as? PinterestLayout {
+            layout.delegate = self
+        }
+        recipeCollectionView!.contentInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
         
     }
     
@@ -71,10 +78,47 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 }
 
+//extension HomeViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return cellSize
+//    }
+//}
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return cellSize
+extension HomeViewController : PinterestLayoutDelegate {
+    
+    // This provides the height of the photos
+    
+    /* It uses AVMakeRectWithAspectRatioInsideRect() from AVFoundation to calculate a height that retains the photo’s aspect ratio, restricted to the cell’s width.
+     */
+    
+    func collectionView(_ collectionView:UICollectionView,
+                        heightForPhotoAtIndexPath indexPath: NSIndexPath,
+                        withWidth width: CGFloat) -> CGFloat {
+        
+        let recipe = recipes![indexPath.item]
+        let boundingRect =  CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
+        let sizeImage = CGSize(width: recipe.widthImage.convertToCGFloat(), height: recipe.heightImage.convertToCGFloat())
+        let rect  = AVMakeRect(aspectRatio: sizeImage, insideRect: boundingRect)
+        
+        return rect.size.height
+    }
+    
+    // This calculates the height of the photo’s comment based on the given font and the cell’s width
+    func collectionView(_ collectionView: UICollectionView,
+                        heightForAnnotationAtIndexPath indexPath: NSIndexPath,
+                        withWidth width: CGFloat) -> CGFloat {
+        
+        let annotationPadding = CGFloat(8)
+        let annotationHeaderHeight = CGFloat(17)
+        let recipe = recipes![indexPath.item]
+        let font = UIFont.systemFont(ofSize: 10.0)
+        let commentHeight = recipe.heightForText(font, width: width)
+        
+        /* You then add that height to a hard-coded annotationPadding value for the top and bottom, as well as a hard-coded annotationHeaderHeight that accounts for the size of the annotation title.
+         */
+        let height = annotationPadding + annotationHeaderHeight + commentHeight + annotationPadding
+        
+        return height
     }
 }
 

@@ -8,13 +8,12 @@
 
 import UIKit
 
-class HomeViewControllerLayout: UICollectionViewFlowLayout {
+final class HomeViewControllerLayout: UICollectionViewFlowLayout {
 
-    
     override init() {
         super.init()
-        minimumLineSpacing = 2
-        minimumInteritemSpacing = 2
+        minimumLineSpacing = 10
+        minimumInteritemSpacing = 10
     }
     
     required init?(coder aDecoder: NSCoder) {

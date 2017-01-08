@@ -18,30 +18,49 @@
                 <rect key="frame" x="0.0" y="0.0" width="155" height="180"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-dF-Yvm">
-                        <rect key="frame" x="0.0" y="0.0" width="155" height="148"/>
-                        <color key="backgroundColor" red="0.1764705882" green="0.2274509804" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej8-Hp-E5H">
-                        <rect key="frame" x="8" y="156" width="139" height="16"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMR-vY-5YQ" customClass="RoundedCornersView" customModule="VNRecipes" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="155" height="180"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RwD-dF-Yvm">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="148"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.2274509804" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="148" id="ywa-eG-o0c"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ej8-Hp-E5H">
+                                <rect key="frame" x="8" y="156" width="139" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RwD-dF-Yvm" firstAttribute="leading" secondItem="eMR-vY-5YQ" secondAttribute="leading" id="CYi-Wx-Zd1"/>
+                            <constraint firstItem="ej8-Hp-E5H" firstAttribute="leading" secondItem="eMR-vY-5YQ" secondAttribute="leading" constant="8" id="UCh-8R-Vll"/>
+                            <constraint firstItem="RwD-dF-Yvm" firstAttribute="top" secondItem="eMR-vY-5YQ" secondAttribute="top" id="giz-5g-ENe"/>
+                            <constraint firstItem="ej8-Hp-E5H" firstAttribute="top" secondItem="RwD-dF-Yvm" secondAttribute="bottom" constant="8" id="mgU-Ji-G99"/>
+                            <constraint firstAttribute="trailing" secondItem="RwD-dF-Yvm" secondAttribute="trailing" id="sLD-5E-9ux"/>
+                            <constraint firstAttribute="trailing" secondItem="ej8-Hp-E5H" secondAttribute="trailing" constant="8" id="szn-kQ-Rra"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ej8-Hp-E5H" firstAttribute="top" secondItem="RwD-dF-Yvm" secondAttribute="bottom" constant="8" id="1iw-j6-mFP"/>
-                <constraint firstAttribute="trailing" secondItem="ej8-Hp-E5H" secondAttribute="trailing" constant="8" id="6wk-I1-5Od"/>
-                <constraint firstAttribute="trailing" secondItem="RwD-dF-Yvm" secondAttribute="trailing" id="93L-vk-FIC"/>
-                <constraint firstItem="RwD-dF-Yvm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Mms-i9-Rv1"/>
-                <constraint firstItem="RwD-dF-Yvm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eMk-mI-71W"/>
-                <constraint firstItem="ej8-Hp-E5H" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="gvE-ml-dvD"/>
-                <constraint firstAttribute="bottom" secondItem="ej8-Hp-E5H" secondAttribute="bottom" constant="8" id="tii-Xv-Wbo"/>
+                <constraint firstAttribute="trailing" secondItem="eMR-vY-5YQ" secondAttribute="trailing" id="NL7-2m-eiq"/>
+                <constraint firstItem="eMR-vY-5YQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PAs-wg-PCS"/>
+                <constraint firstItem="eMR-vY-5YQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pxQ-z8-2Dq"/>
+                <constraint firstAttribute="bottom" secondItem="eMR-vY-5YQ" secondAttribute="bottom" id="wJg-lP-twe"/>
             </constraints>
             <size key="customSize" width="155" height="180"/>
             <connections>
+                <outlet property="photoHeightConstraint" destination="ywa-eG-o0c" id="leb-la-2Vg"/>
                 <outlet property="photoImageView" destination="RwD-dF-Yvm" id="tKG-Zd-pHq"/>
                 <outlet property="titleLabel" destination="ej8-Hp-E5H" id="Qxp-j7-dQw"/>
             </connections>

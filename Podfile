@@ -5,6 +5,8 @@ abstract_target 'Recipes' do
   pod 'ObjectMapper', '~> 2.2'
   pod 'RealmSwift'
   pod 'SwiftyJSON’, '~> 3.0'
+  pod 'SDWebImage', '~> 3.8'
+  
   target 'VNRecipes'
   target 'VNRecipes Dev'
 end
