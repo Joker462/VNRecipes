@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import ZoomTransitioning
 
 class HomeNavigationController: BaseNavigationController {
 
+    private let zoomNavigationControllerDelegate = ZoomNavigationControllerDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        delegate = zoomNavigationControllerDelegate
+    }
+    
 }

@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z2o-Kb-nQJ">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="z2o-Kb-nQJ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,11 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2El-IC-Pul">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="wDZ-u7-LrZ" customClass="PinterestLayout" customModule="VNRecipes" customModuleProvider="target"/>
                                 <cells/>
@@ -34,13 +30,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2El-IC-Pul" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5iE-aU-T65"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2El-IC-Pul" secondAttribute="bottom" id="8Ie-C0-HtH"/>
-                            <constraint firstAttribute="trailing" secondItem="2El-IC-Pul" secondAttribute="trailing" id="kNF-4e-wPa"/>
-                            <constraint firstItem="2El-IC-Pul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rmq-gP-S6f"/>
+                            <constraint firstAttribute="bottom" secondItem="2El-IC-Pul" secondAttribute="bottom" id="6Pg-4n-9k6"/>
+                            <constraint firstItem="2El-IC-Pul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RXu-LE-CYe"/>
+                            <constraint firstAttribute="trailing" secondItem="2El-IC-Pul" secondAttribute="trailing" id="Z2o-FL-480"/>
+                            <constraint firstItem="2El-IC-Pul" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bWP-Gk-E4t"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="alk-33-WqS"/>
                     <connections>
                         <outlet property="recipeCollectionView" destination="2El-IC-Pul" id="mCr-Q0-tJN"/>

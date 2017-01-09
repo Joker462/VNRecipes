@@ -8,12 +8,13 @@
 
 import UIKit
 import AVFoundation
+import ZoomTransitioning
 
 class HomeViewController: BaseViewController {
 
     @IBOutlet weak var recipeCollectionView: UICollectionView!
     var recipes: [Recipe]?
-    
+    fileprivate var selectedImageView: UIImageView?
     let cellSize = CGSize(width: Screen.WIDTH/2 - 10, height: Screen.WIDTH/2)
     
     override func viewDidLoad() {
@@ -74,7 +75,12 @@ extension HomeViewController: UICollectionViewDataSource {
 // MARK: UICollecionViewDelegate 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! RecipeCell
+        selectedImageView = cell.photoImageView
         
+        let detailVC = HomeDetailViewController.instantiateFromStoryboard(storyboardName: "Recipe")
+        detailVC.heightImage = cell.photoImageView.frame.size.height
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
@@ -119,6 +125,29 @@ extension HomeViewController : PinterestLayoutDelegate {
         let height = annotationPadding + annotationHeaderHeight + commentHeight + annotationPadding
         
         return height
+    }
+}
+
+extension HomeViewController: ZoomTransitionSourceDelegate {
+    func transitionSourceImageView() -> UIImageView {
+        return selectedImageView ?? UIImageView()
+    }
+    
+    func transitionSourceImageViewFrame(forward: Bool) -> CGRect {
+        guard let selectedImageView = selectedImageView else { return CGRect.zero }
+        return selectedImageView.convert(selectedImageView.bounds, to: view)
+    }
+    
+    func transitionSourceWillBegin() {
+        selectedImageView?.isHidden = true
+    }
+    
+    func transitionSourceDidEnd() {
+        selectedImageView?.isHidden = false
+    }
+    
+    func transitionSourceDidCancel() {
+        selectedImageView?.isHidden = false
     }
 }
 

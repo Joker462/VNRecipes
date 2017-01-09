@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0A52EB648E46914BBF67D73A /* Pods_Recipes_VNRecipes_Dev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA5CB3670B38746BB663A46 /* Pods_Recipes_VNRecipes_Dev.framework */; };
 		A38D479C63AB4C12B693FE8A /* Pods_Recipes_VNRecipes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADAD95A749BCEDEA54FA0F54 /* Pods_Recipes_VNRecipes.framework */; };
+		CD0700371E237E3B00624F23 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0700361E237E3B00624F23 /* HomeDetailViewController.swift */; };
+		CD0700381E237E3B00624F23 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0700361E237E3B00624F23 /* HomeDetailViewController.swift */; };
+		CD07003A1E237EE600624F23 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0700391E237EE600624F23 /* Recipe.storyboard */; };
+		CD07003B1E237EE600624F23 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0700391E237EE600624F23 /* Recipe.storyboard */; };
 		CD507E2E1DE82A9B00E57F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD507E2C1DE82A9B00E57F48 /* LaunchScreen.storyboard */; };
 		F34C73E81E1558E6005C4D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34C73E71E1558E6005C4D99 /* Main.storyboard */; };
 		F34C73EB1E1558F2005C4D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34C73E91E1558F2005C4D99 /* AppDelegate.swift */; };
@@ -100,6 +104,8 @@
 		3D30D0ACEE541DD34F1B7539 /* Pods-Recipes-VNRecipes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipes-VNRecipes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recipes-VNRecipes/Pods-Recipes-VNRecipes.debug.xcconfig"; sourceTree = "<group>"; };
 		9C9C3790AA8C3EEF2584EF1A /* Pods-Recipes-VNRecipes Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipes-VNRecipes Dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recipes-VNRecipes Dev/Pods-Recipes-VNRecipes Dev.release.xcconfig"; sourceTree = "<group>"; };
 		ADAD95A749BCEDEA54FA0F54 /* Pods_Recipes_VNRecipes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipes_VNRecipes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD0700361E237E3B00624F23 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		CD0700391E237EE600624F23 /* Recipe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
 		CD507E201DE82A9A00E57F48 /* VNRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VNRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD507E2D1DE82A9B00E57F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E12E5B9B6E7AFFB65FC0DB1D /* Pods-Recipes-VNRecipes Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipes-VNRecipes Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recipes-VNRecipes Dev/Pods-Recipes-VNRecipes Dev.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,7 +145,7 @@
 		F37A6D2E1E17F75F007E0591 /* RESTRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTRequest.swift; sourceTree = "<group>"; };
 		F37A6D2F1E17F75F007E0591 /* RESTResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTResponse.swift; sourceTree = "<group>"; };
 		F3B199241DF3FE32000D746F /* VNRecipes Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VNRecipes Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B199251DF3FE32000D746F /* VNRecipes Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VNRecipes Dev-Info.plist"; path = "/Users/joker/Documents/projectIOS/SourceTree/VNRecipes/VNRecipes Dev-Info.plist"; sourceTree = "<absolute>"; };
+		F3B199251DF3FE32000D746F /* VNRecipes Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VNRecipes Dev-Info.plist"; path = "/Users/hungthai/Desktop/VNRecipes/VNRecipes Dev-Info.plist"; sourceTree = "<absolute>"; };
 		F3E0F6081E213739006DC55B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		F3E0F60C1E2137FF006DC55B /* RecipeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
 		F3E0F6111E2142E6006DC55B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				F34C73E71E1558E6005C4D99 /* Main.storyboard */,
+				CD0700391E237EE600624F23 /* Recipe.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -335,6 +342,7 @@
 				F3783D4E1E1A0185005FFBED /* MainContainerTabBarController.swift */,
 				F3783D651E1A3BCC005FFBED /* HomeNavigationController.swift */,
 				F3E0F6231E216533006DC55B /* HomeViewControllerLayout.swift */,
+				CD0700361E237E3B00624F23 /* HomeDetailViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -554,6 +562,7 @@
 			files = (
 				F34C73FA1E156947005C4D99 /* Localizable.strings in Resources */,
 				F3E0F61B1E214329006DC55B /* RecipeCell.xib in Resources */,
+				CD07003A1E237EE600624F23 /* Recipe.storyboard in Resources */,
 				CD507E2E1DE82A9B00E57F48 /* LaunchScreen.storyboard in Resources */,
 				F34C73E81E1558E6005C4D99 /* Main.storyboard in Resources */,
 				F34C73EE1E1558FB005C4D99 /* Assets.xcassets in Resources */,
@@ -569,6 +578,7 @@
 				F34C73FB1E156947005C4D99 /* Localizable.strings in Resources */,
 				F3E0F61C1E214329006DC55B /* RecipeCell.xib in Resources */,
 				F34C73F61E15668F005C4D99 /* Assets.xcassets in Resources */,
+				CD07003B1E237EE600624F23 /* Recipe.storyboard in Resources */,
 				F34C73F01E155F9A005C4D99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,6 +715,7 @@
 				F3783D531E1A0BD5005FFBED /* UIColor.swift in Sources */,
 				F3783D491E19F518005FFBED /* BaseObject.swift in Sources */,
 				F3E0F6091E213739006DC55B /* Recipe.swift in Sources */,
+				CD0700371E237E3B00624F23 /* HomeDetailViewController.swift in Sources */,
 				F37A6D281E17F679007E0591 /* StaticData.swift in Sources */,
 				F3E0F61E1E215FF6006DC55B /* UITableView.swift in Sources */,
 				F34C74061E156B8B005C4D99 /* UILabel.swift in Sources */,
@@ -749,6 +760,7 @@
 				F3783D541E1A0BD5005FFBED /* UIColor.swift in Sources */,
 				F3783D4A1E19F518005FFBED /* BaseObject.swift in Sources */,
 				F3E0F60A1E213739006DC55B /* Recipe.swift in Sources */,
+				CD0700381E237E3B00624F23 /* HomeDetailViewController.swift in Sources */,
 				F37A6D371E17F75F007E0591 /* RESTParam.swift in Sources */,
 				F3E0F61F1E215FF6006DC55B /* UITableView.swift in Sources */,
 				F3783D4D1E19F6D3005FFBED /* TabBarObject.swift in Sources */,
