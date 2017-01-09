@@ -33,7 +33,6 @@ extension HomeDetailViewController: ZoomTransitionDestinationDelegate {
             let y = topLayoutGuide.length
             
             let width = view.frame.width
-//            var height = width * 2.0 / 3.0
             let height = pictureHeightConstraint.constant
             return CGRect(x: x, y: y, width: width, height: height)
         } else {
