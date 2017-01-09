@@ -145,7 +145,7 @@
 		F37A6D2E1E17F75F007E0591 /* RESTRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTRequest.swift; sourceTree = "<group>"; };
 		F37A6D2F1E17F75F007E0591 /* RESTResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTResponse.swift; sourceTree = "<group>"; };
 		F3B199241DF3FE32000D746F /* VNRecipes Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VNRecipes Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B199251DF3FE32000D746F /* VNRecipes Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VNRecipes Dev-Info.plist"; path = "/Users/hungthai/Desktop/VNRecipes/VNRecipes Dev-Info.plist"; sourceTree = "<absolute>"; };
+		F3B199251DF3FE32000D746F /* VNRecipes Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VNRecipes Dev-Info.plist"; path = "/Users/joker/Documents/projectIOS/SourceTree/VNRecipes/VNRecipes Dev-Info.plist"; sourceTree = "<absolute>"; };
 		F3E0F6081E213739006DC55B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		F3E0F60C1E2137FF006DC55B /* RecipeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
 		F3E0F6111E2142E6006DC55B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };

@@ -16,7 +16,7 @@ class HomeDetailViewController: BaseViewController {
     var heightImage: CGFloat = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        super.initUI()
         if pictureHeightConstraint.constant < heightImage {
             pictureHeightConstraint.constant = heightImage
         }
