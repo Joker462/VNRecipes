@@ -9,7 +9,7 @@
         <!--Home Detail View Controller-->
         <scene sceneID="tbM-sT-pcD">
             <objects>
-                <viewController storyboardIdentifier="HomeDetailViewController" id="uEk-sy-YDZ" customClass="HomeDetailViewController" customModule="VNRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeDetailViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="uEk-sy-YDZ" customClass="HomeDetailViewController" customModule="VNRecipes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="85F-4L-Wa3"/>
                         <viewControllerLayoutGuide type="bottom" id="60z-Qs-lFg"/>
@@ -18,24 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYG-CV-jaN">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="eTZ-Ax-XHr"/>
-                                </constraints>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Ps-We-MKD">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zYG-CV-jaN" firstAttribute="top" secondItem="85F-4L-Wa3" secondAttribute="bottom" id="3Vt-f4-udF"/>
-                            <constraint firstAttribute="trailing" secondItem="zYG-CV-jaN" secondAttribute="trailing" id="Hsu-nw-YJK"/>
-                            <constraint firstItem="zYG-CV-jaN" firstAttribute="width" secondItem="7XB-6V-7fn" secondAttribute="width" id="PSo-3G-b7e"/>
-                            <constraint firstItem="zYG-CV-jaN" firstAttribute="leading" secondItem="7XB-6V-7fn" secondAttribute="leading" id="YPk-yq-P3c"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ps-We-MKD" secondAttribute="trailing" id="7l5-mR-XoA"/>
+                            <constraint firstItem="4Ps-We-MKD" firstAttribute="leading" secondItem="7XB-6V-7fn" secondAttribute="leading" id="88I-z5-WeE"/>
+                            <constraint firstItem="4Ps-We-MKD" firstAttribute="top" secondItem="85F-4L-Wa3" secondAttribute="bottom" id="8DY-44-LIm"/>
+                            <constraint firstItem="60z-Qs-lFg" firstAttribute="top" secondItem="4Ps-We-MKD" secondAttribute="bottom" id="fdd-yu-kas"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="pictureHeightConstraint" destination="eTZ-Ax-XHr" id="5nn-3s-aHP"/>
-                        <outlet property="pictureImageView" destination="zYG-CV-jaN" id="edn-8R-Kgt"/>
+                        <outlet property="recipeDetailTableView" destination="4Ps-We-MKD" id="io9-6R-5EX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t2-g4-prV" userLabel="First Responder" sceneMemberID="firstResponder"/>

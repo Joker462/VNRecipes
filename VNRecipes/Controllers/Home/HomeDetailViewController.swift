@@ -11,17 +11,36 @@ import ZoomTransitioning
 
 class HomeDetailViewController: BaseViewController {
 
-    @IBOutlet weak var pictureHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var pictureImageView: UIImageView!
-    var heightImage: CGFloat = 0.0
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        super.initUI()
-        if pictureHeightConstraint.constant < heightImage {
-            pictureHeightConstraint.constant = heightImage
+    var pictureImageView: UIImageView!
+    @IBOutlet weak var recipeDetailTableView: UITableView!
+    
+    var heightImage: CGFloat = 250.0 {
+        didSet {
+            if heightImage < 250.0 {
+                heightImage = 250.0
+            }
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.initUI()
+        
+        
+    }
+    
+    override func initUI() {
+        super.initUI()
+        // Create header for table view
+        pictureImageView = UIImageView(frame: CGRect(x: 0.0, y: topLayoutGuide.length, width: view.frame.width, height: heightImage))
+        pictureImageView.contentMode = .scaleAspectFill
+        pictureImageView.clipsToBounds = true
+        recipeDetailTableView.tableHeaderView = pictureImageView
+        
+        recipeDetailTableView.backgroundColor = UIColor.black
+        recipeDetailTableView.separatorStyle = .none
+        
+    }
 
 }
 
@@ -31,9 +50,8 @@ extension HomeDetailViewController: ZoomTransitionDestinationDelegate {
         if forward {
             let x: CGFloat = 0.0
             let y = topLayoutGuide.length
-            
             let width = view.frame.width
-            let height = pictureHeightConstraint.constant
+            let height = heightImage
             return CGRect(x: x, y: y, width: width, height: height)
         } else {
             return pictureImageView.convert(pictureImageView.bounds, to: view)

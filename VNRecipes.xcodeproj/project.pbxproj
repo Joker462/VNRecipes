@@ -14,6 +14,7 @@
 		CD07003A1E237EE600624F23 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0700391E237EE600624F23 /* Recipe.storyboard */; };
 		CD07003B1E237EE600624F23 /* Recipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0700391E237EE600624F23 /* Recipe.storyboard */; };
 		CD507E2E1DE82A9B00E57F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD507E2C1DE82A9B00E57F48 /* LaunchScreen.storyboard */; };
+		CD628BCA1E24BB4300EBF72B /* VNRecipes Dev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD628BC91E24BB4300EBF72B /* VNRecipes Dev-Info.plist */; };
 		F34C73E81E1558E6005C4D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34C73E71E1558E6005C4D99 /* Main.storyboard */; };
 		F34C73EB1E1558F2005C4D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34C73E91E1558F2005C4D99 /* AppDelegate.swift */; };
 		F34C73EC1E1558F2005C4D99 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F34C73EA1E1558F2005C4D99 /* Info.plist */; };
@@ -108,6 +109,7 @@
 		CD0700391E237EE600624F23 /* Recipe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipe.storyboard; sourceTree = "<group>"; };
 		CD507E201DE82A9A00E57F48 /* VNRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VNRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD507E2D1DE82A9B00E57F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD628BC91E24BB4300EBF72B /* VNRecipes Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VNRecipes Dev-Info.plist"; sourceTree = "<group>"; };
 		E12E5B9B6E7AFFB65FC0DB1D /* Pods-Recipes-VNRecipes Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipes-VNRecipes Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Recipes-VNRecipes Dev/Pods-Recipes-VNRecipes Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		E936645CE0B938B55E93A888 /* Pods-Recipes-VNRecipes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recipes-VNRecipes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recipes-VNRecipes/Pods-Recipes-VNRecipes.release.xcconfig"; sourceTree = "<group>"; };
 		EBA5CB3670B38746BB663A46 /* Pods_Recipes_VNRecipes_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recipes_VNRecipes_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +147,6 @@
 		F37A6D2E1E17F75F007E0591 /* RESTRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTRequest.swift; sourceTree = "<group>"; };
 		F37A6D2F1E17F75F007E0591 /* RESTResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTResponse.swift; sourceTree = "<group>"; };
 		F3B199241DF3FE32000D746F /* VNRecipes Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VNRecipes Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B199251DF3FE32000D746F /* VNRecipes Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VNRecipes Dev-Info.plist"; path = "/Users/joker/Documents/projectIOS/SourceTree/VNRecipes/VNRecipes Dev-Info.plist"; sourceTree = "<absolute>"; };
 		F3E0F6081E213739006DC55B /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		F3E0F60C1E2137FF006DC55B /* RecipeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeAPI.swift; sourceTree = "<group>"; };
 		F3E0F6111E2142E6006DC55B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -203,7 +204,6 @@
 			children = (
 				CD507E221DE82A9A00E57F48 /* VNRecipes */,
 				CD507E211DE82A9A00E57F48 /* Products */,
-				F3B199251DF3FE32000D746F /* VNRecipes Dev-Info.plist */,
 				291CFD6073213B35812A02FC /* Pods */,
 				ACFF0107751F86E975EF4DBA /* Frameworks */,
 			);
@@ -221,6 +221,7 @@
 		CD507E221DE82A9A00E57F48 /* VNRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				CD628BC91E24BB4300EBF72B /* VNRecipes Dev-Info.plist */,
 				F34C73E21E1557E4005C4D99 /* Supporting Files */,
 				F34C73DD1E155260005C4D99 /* Shared */,
 				F34C73DC1E155259005C4D99 /* Models */,
@@ -561,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F34C73FA1E156947005C4D99 /* Localizable.strings in Resources */,
+				CD628BCA1E24BB4300EBF72B /* VNRecipes Dev-Info.plist in Resources */,
 				F3E0F61B1E214329006DC55B /* RecipeCell.xib in Resources */,
 				CD07003A1E237EE600624F23 /* Recipe.storyboard in Resources */,
 				CD507E2E1DE82A9B00E57F48 /* LaunchScreen.storyboard in Resources */,
