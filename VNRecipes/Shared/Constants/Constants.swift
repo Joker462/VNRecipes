@@ -45,6 +45,8 @@ struct DeviceType {
 // Cells identifier
 struct CellIdentifier {
     static let recipe               =           "RecipeCell"
+    static let detailRecipeText     =           "RecipeDetailTextCell"
+    static let detailRecipeImage    =           "RecipeDetailImageCell"
 }
 
 // Color

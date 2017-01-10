@@ -14,6 +14,7 @@ class HomeDetailViewController: BaseViewController {
     var pictureImageView: UIImageView!
     @IBOutlet weak var recipeDetailTableView: UITableView!
     
+    var recipeText: [String] = []
     var heightImage: CGFloat = 250.0 {
         didSet {
             if heightImage < 250.0 {
@@ -25,8 +26,7 @@ class HomeDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initUI()
-        
-        
+        self.loadData()
     }
     
     override func initUI() {
@@ -39,9 +39,23 @@ class HomeDetailViewController: BaseViewController {
         
         recipeDetailTableView.backgroundColor = UIColor.black
         recipeDetailTableView.separatorStyle = .none
+        recipeDetailTableView.registerCellNib(anyClass: RecipeDetailTextCell.self)
+        recipeDetailTableView.registerCellNib(anyClass: RecipeDetailImageCell.self)
+        
+        recipeDetailTableView.estimatedRowHeight = 44.0
+        recipeDetailTableView.rowHeight = UITableViewAutomaticDimension
         
     }
 
+    override func loadData() {
+        RecipeAPI.sharedInstance.getDetailRecipe(id: 777) { [unowned self] (recipeContent) in
+            if recipeContent != nil {
+                self.recipeText = recipeContent!.content.split(regex: "\\([0-9]+\\)")
+                self.recipeDetailTableView.reloadData()
+            }
+        }
+    }
+    
 }
 
 
@@ -69,5 +83,23 @@ extension HomeDetailViewController: ZoomTransitionDestinationDelegate {
     
     func transitionDestinationDidCancel() {
         pictureImageView.isHidden = false
+    }
+}
+
+extension HomeDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recipeText.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.detailRecipeText) as! RecipeDetailTextCell
+        cell.configureCell(anyItem: recipeText[indexPath.row])
+        return cell
+    }
+}
+
+extension HomeDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }
