@@ -15,6 +15,7 @@ class RecipeDetailImageCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.backgroundColor = UIColor.black
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,10 +25,10 @@ class RecipeDetailImageCell: BaseTableViewCell {
     }
     
     override func configureCell<T>(anyItem: T) {
-        guard let image = anyItem as? DetailRecipeImage else {
+        guard let imageNamed = anyItem as? String else {
             return
         }
-        let thumbImage = URL(string: image.url)
+        let thumbImage = URL(string: imageNamed)
         pictureImageView.sd_setImage(with: thumbImage)
     }
     
