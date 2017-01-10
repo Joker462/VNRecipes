@@ -61,4 +61,10 @@ struct ColorApp {
     static let backgroundController             =   "#000000"
 }
 
+// RegularExpression
+struct Rex {
+    static let link        =    "http?://([-\\w\\.]+)+(:\\d+)?(/([\\w/_\\.]*(\\?\\S+)?)?)?"
+    static let mail        =    "[A-Z0-9a-z._%+]+@[A-Za-z0-9.]+\\.[A-Za-z]{2,4}"
+    static let number      =    "\\([0-9]+\\)"
+}
 

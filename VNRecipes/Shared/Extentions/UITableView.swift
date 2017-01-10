@@ -16,4 +16,8 @@ extension UITableView {
         register(nib, forCellReuseIdentifier: identifier)
     }
 
+    func reloadData(with animation: UITableViewRowAnimation) {
+        reloadSections(IndexSet(integersIn: 0..<numberOfSections), with: animation)
+    }
+    
 }

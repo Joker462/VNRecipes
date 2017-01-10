@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SDWebImage
 
-class RecipeDetailImageCell: UITableViewCell {
+class RecipeDetailImageCell: BaseTableViewCell {
 
     @IBOutlet weak var pictureImageView: UIImageView!
     override func awakeFromNib() {
@@ -20,6 +21,14 @@ class RecipeDetailImageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func configureCell<T>(anyItem: T) {
+        guard let image = anyItem as? DetailRecipeImage else {
+            return
+        }
+        let thumbImage = URL(string: image.url)
+        pictureImageView.sd_setImage(with: thumbImage)
     }
     
 }

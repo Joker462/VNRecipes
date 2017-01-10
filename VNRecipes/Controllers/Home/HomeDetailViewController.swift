@@ -9,12 +9,14 @@
 import UIKit
 import ZoomTransitioning
 
-class HomeDetailViewController: BaseViewController {
+final class HomeDetailViewController: BaseViewController {
 
     var pictureImageView: UIImageView!
     @IBOutlet weak var recipeDetailTableView: UITableView!
     
-    var recipeText: [String] = []
+    fileprivate var recipeText: [String] = []
+    fileprivate let IMAGE_HEIGHT: CGFloat = RATIO.SCREEN_HEIGHT * (150/568)
+    var recipe: Recipe?
     var heightImage: CGFloat = 250.0 {
         didSet {
             if heightImage < 250.0 {
@@ -48,12 +50,11 @@ class HomeDetailViewController: BaseViewController {
     }
 
     override func loadData() {
-        RecipeAPI.sharedInstance.getDetailRecipe(id: 777) { [unowned self] (recipeContent) in
-            if recipeContent != nil {
-                self.recipeText = recipeContent!.content.split(regex: "\\([0-9]+\\)")
-                self.recipeDetailTableView.reloadData()
-            }
+        guard let recipeData = recipe else {
+            return
         }
+        recipeText = recipeData.content.split(regex: Rex.number)
+        recipeDetailTableView.reloadData(with: UITableViewRowAnimation.fade)
     }
     
 }
@@ -67,6 +68,7 @@ extension HomeDetailViewController: ZoomTransitionDestinationDelegate {
             let width = view.frame.width
             let height = heightImage
             return CGRect(x: x, y: y, width: width, height: height)
+            
         } else {
             return pictureImageView.convert(pictureImageView.bounds, to: view)
         }
@@ -88,18 +90,28 @@ extension HomeDetailViewController: ZoomTransitionDestinationDelegate {
 
 extension HomeDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeText.count
+        return recipe?.detailImages != nil ? (recipe?.detailImages?.count)! + recipeText.count : recipeText.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.detailRecipeText) as! RecipeDetailTextCell
-        cell.configureCell(anyItem: recipeText[indexPath.row])
-        return cell
+        var cell: BaseTableViewCell?
+        if indexPath.row % 2 == 0 {
+            cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.detailRecipeText) as! RecipeDetailTextCell
+            cell!.configureCell(anyItem: recipeText[indexPath.row])
+        }
+        else {
+            cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.detailRecipeImage) as! RecipeDetailImageCell
+            guard let detailImages = recipe!.detailImages else {
+                return cell!
+            }
+            cell?.configureCell(anyItem: detailImages.elements[indexPath.row])
+        }
+        return cell!
     }
 }
 
 extension HomeDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return indexPath.row % 2 == 0 ? UITableViewAutomaticDimension : IMAGE_HEIGHT
     }
 }

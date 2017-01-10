@@ -14,7 +14,9 @@ class Recipe: Object, Mappable {
     dynamic var imageNamed: String = ""
     dynamic var heightImage: String = ""
     dynamic var widthImage: String = ""
-
+    dynamic var content: String = ""
+    var detailImages: List<DetailRecipeImage>?
+    
     convenience required init?(map: Map) {
         self.init()
     }
@@ -22,10 +24,13 @@ class Recipe: Object, Mappable {
     
     // MARK: Mapping
     func mapping(map: Map) {
-        name        <- map["name"]
-        imageNamed  <- map["imageURL"]
-        heightImage <- map["heightImage"]
-        widthImage  <- map["widthImage"]
+        name            <- map["name"]
+        imageNamed      <- map["imageURL"]
+        heightImage     <- map["heightImage"]
+        widthImage      <- map["widthImage"]
+        content         <- map["content"]
+        detailImages    <- (map["linkURLs"], ImageTransform<DetailRecipeImage>())
+        
     }
     
     
@@ -33,4 +38,26 @@ class Recipe: Object, Mappable {
         let rect = NSString(string: name).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
         return ceil(rect.height)
     }
+}
+
+public struct ImageTransform<T: RealmSwift.Object>: TransformType where T: Mappable {
+    
+    public init() { }
+    
+    public typealias Object = List<T>
+    public typealias JSON = Array<Any>
+    
+    public func transformFromJSON(_ value: Any?) -> List<T>? {
+        if let objects = Mapper<T>().mapArray(JSONObject: value) {
+            let list = List<T>()
+            list.append(objectsIn: objects)
+            return list
+        }
+        return nil
+    }
+    
+    public func transformToJSON(_ value: Object?) -> JSON? {
+        return value?.flatMap { $0.toJSON() }
+    }
+    
 }

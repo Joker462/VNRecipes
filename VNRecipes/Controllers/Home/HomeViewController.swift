@@ -79,6 +79,7 @@ extension HomeViewController: UICollectionViewDelegate {
         selectedImageView = cell.photoImageView
         
         let detailVC = HomeDetailViewController.instantiateFromStoryboard(storyboardName: "Recipe")
+        detailVC.recipe = recipes![indexPath.row]
         detailVC.heightImage = cell.photoImageView.bounds.size.height
         navigationController?.pushViewController(detailVC, animated: true)
     }
