@@ -10,6 +10,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SwiftyJSON (3.1.1)
+  - ZoomTransitioning (1.4.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - RealmSwift
   - SDWebImage (~> 3.8)
   - SwiftyJSON (~> 3.0)
+  - ZoomTransitioning (~> 1.4.0)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
@@ -25,7 +27,8 @@ SPEC CHECKSUMS:
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+  ZoomTransitioning: 42d9ad29c83d896f3fe28c324a4fe98ac821f0dd
 
-PODFILE CHECKSUM: 3e7335d12aef8eb6758d01830cedf77a45e061d4
+PODFILE CHECKSUM: f11a91076785222d4c67b3f065b867cd691d9675
 
 COCOAPODS: 1.2.0.beta.3

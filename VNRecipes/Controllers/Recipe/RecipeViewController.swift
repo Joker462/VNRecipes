@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import ZoomTransitioning
 
-class HomeViewController: BaseViewController {
+class RecipeViewController: BaseViewController {
 
     @IBOutlet weak var recipeCollectionView: UICollectionView!
     var recipes: [Recipe]?
@@ -60,7 +60,7 @@ class HomeViewController: BaseViewController {
 }
 
 // MARK: UICollectionViewDataSource
-extension HomeViewController: UICollectionViewDataSource {
+extension RecipeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recipes?.count ?? 0
     }
@@ -73,25 +73,18 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 // MARK: UICollecionViewDelegate 
-extension HomeViewController: UICollectionViewDelegate {
+extension RecipeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! RecipeCell
         selectedImageView = cell.photoImageView
         
-        let detailVC = HomeDetailViewController.instantiateFromStoryboard(storyboardName: "Recipe")
-        detailVC.recipe = recipes![indexPath.row]
-        detailVC.heightImage = cell.photoImageView.bounds.size.height
-        navigationController?.pushViewController(detailVC, animated: true)
+        
+        FlowManager.presentDetailRecipeVC(navigationController: navigationController!, imageView: cell.photoImageView, recipe: recipes![indexPath.row])
+        
     }
 }
 
-//extension HomeViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return cellSize
-//    }
-//}
-
-extension HomeViewController : PinterestLayoutDelegate {
+extension RecipeViewController : PinterestLayoutDelegate {
     
     // This provides the height of the photos
     
@@ -129,7 +122,7 @@ extension HomeViewController : PinterestLayoutDelegate {
     }
 }
 
-extension HomeViewController: ZoomTransitionSourceDelegate {
+extension RecipeViewController: ZoomTransitionSourceDelegate {
     func transitionSourceImageView() -> UIImageView {
         return selectedImageView ?? UIImageView()
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HomeViewControllerLayout: UICollectionViewFlowLayout {
+final class RecipeViewControllerLayout: UICollectionViewFlowLayout {
 
     override init() {
         super.init()

@@ -9,7 +9,7 @@
 import UIKit
 import ZoomTransitioning
 
-class HomeNavigationController: BaseNavigationController {
+class RecipeNavigationController: BaseNavigationController {
 
     private let zoomNavigationControllerDelegate = ZoomNavigationControllerDelegate()
     

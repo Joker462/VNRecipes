@@ -16,6 +16,7 @@ class Recipe: Object, Mappable {
     dynamic var widthImage: String = ""
     dynamic var content: String = ""
     var detailImages: List<DetailRecipeImage>?
+    var ingredients: List<Ingredient>?
     
     convenience required init?(map: Map) {
         self.init()
@@ -29,8 +30,8 @@ class Recipe: Object, Mappable {
         heightImage     <- map["heightImage"]
         widthImage      <- map["widthImage"]
         content         <- map["content"]
-        detailImages    <- (map["linkURLs"], ImageTransform<DetailRecipeImage>())
-        
+        detailImages    <- (map["linkURLs"], Transform<DetailRecipeImage>())
+        ingredients     <- (map["ingredients"], Transform<Ingredient>())
     }
     
     
@@ -40,7 +41,7 @@ class Recipe: Object, Mappable {
     }
 }
 
-public struct ImageTransform<T: RealmSwift.Object>: TransformType where T: Mappable {
+public struct Transform<T: RealmSwift.Object>: TransformType where T: Mappable {
     
     public init() { }
     

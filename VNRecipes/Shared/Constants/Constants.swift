@@ -42,6 +42,13 @@ struct DeviceType {
     static let IPAD              = UIDevice.current.userInterfaceIdiom == .pad   && Screen.MAX == 1024.0
 }
 
+// StoryBoards
+struct StoryBoard {
+    static let main                 =       "Main"
+    static let recipe               =       "Recipe"
+}
+
+
 // Cells identifier
 struct CellIdentifier {
     static let recipe               =           "RecipeCell"

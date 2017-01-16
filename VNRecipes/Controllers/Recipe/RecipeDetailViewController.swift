@@ -9,7 +9,7 @@
 import UIKit
 import ZoomTransitioning
 
-final class HomeDetailViewController: BaseViewController {
+final class RecipeDetailViewController: BaseViewController {
 
     var pictureImageView: UIImageView!
     @IBOutlet weak var recipeDetailTableView: UITableView!
@@ -66,7 +66,7 @@ final class HomeDetailViewController: BaseViewController {
 }
 
 
-extension HomeDetailViewController: ZoomTransitionDestinationDelegate {
+extension RecipeDetailViewController: ZoomTransitionDestinationDelegate {
     func transitionDestinationImageViewFrame(forward: Bool) -> CGRect {
         if forward {
             let x: CGFloat = 0.0
@@ -94,9 +94,8 @@ extension HomeDetailViewController: ZoomTransitionDestinationDelegate {
     }
 }
 
-extension HomeDetailViewController: UITableViewDataSource {
+extension RecipeDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return recipe?.detailImages != nil ? (recipe?.detailImages?.count)! + recipeText.count : recipeText.count
         return recipeContent.count
     }
     
@@ -129,7 +128,7 @@ extension HomeDetailViewController: UITableViewDataSource {
     }
     
 }
-extension HomeDetailViewController: UITableViewDelegate {
+extension RecipeDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.row % 2 == 0 ? UITableViewAutomaticDimension : IMAGE_HEIGHT
     }
