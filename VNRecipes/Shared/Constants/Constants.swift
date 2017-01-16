@@ -54,6 +54,7 @@ struct CellIdentifier {
     static let recipe               =           "RecipeCell"
     static let detailRecipeText     =           "RecipeDetailTextCell"
     static let detailRecipeImage    =           "RecipeDetailImageCell"
+    static let ingredient           =           "IngredientCell"
 }
 
 // Color

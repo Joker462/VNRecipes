@@ -10,7 +10,7 @@ import UIKit
 import ZoomTransitioning
 
 final class RecipeDetailViewController: BaseViewController {
-
+    
     var pictureImageView: UIImageView!
     @IBOutlet weak var recipeDetailTableView: UITableView!
     
@@ -43,12 +43,13 @@ final class RecipeDetailViewController: BaseViewController {
         recipeDetailTableView.separatorStyle = .none
         recipeDetailTableView.registerCellNib(anyClass: RecipeDetailTextCell.self)
         recipeDetailTableView.registerCellNib(anyClass: RecipeDetailImageCell.self)
+        recipeDetailTableView.registerCellNib(anyClass: IngredientCell.self)
         
         recipeDetailTableView.estimatedRowHeight = 44.0
         recipeDetailTableView.rowHeight = UITableViewAutomaticDimension
         
     }
-
+    
     override func loadData() {
         guard let recipeData = recipe else {
             return
@@ -95,22 +96,37 @@ extension RecipeDetailViewController: ZoomTransitionDestinationDelegate {
 }
 
 extension RecipeDetailViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeContent.count
+        if section == 0 {
+            return recipeContent.count
+        }
+        else {
+            return recipe?.ingredients != nil ? recipe!.ingredients!.elements.count : 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: BaseTableViewCell?
-        if recipe?.detailImages == nil {
-            cell = setupContentText(indexPath: indexPath)
-        }
-        else {
-            if indexPath.row % 2 == 0 {
+        if indexPath.section == 0 {
+            if recipe?.detailImages == nil {
                 cell = setupContentText(indexPath: indexPath)
             }
             else {
-                cell = setupContentImage(indexPath: indexPath)
+                if indexPath.row % 2 == 0 {
+                    cell = setupContentText(indexPath: indexPath)
+                }
+                else {
+                    cell = setupContentImage(indexPath: indexPath)
+                }
             }
+        }
+        else {
+            cell = setupIngredient(indexPath: indexPath)
         }
         return cell!
     }
@@ -127,9 +143,22 @@ extension RecipeDetailViewController: UITableViewDataSource {
         return cell
     }
     
+    
+    func setupIngredient(indexPath: IndexPath) -> IngredientCell {
+        let cell = recipeDetailTableView.dequeueReusableCell(withIdentifier: CellIdentifier.ingredient) as! IngredientCell
+        cell.configureCell(anyItem: recipe!.ingredients!.elements[indexPath.row])
+        return cell
+    }
 }
 extension RecipeDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row % 2 == 0 ? UITableViewAutomaticDimension : IMAGE_HEIGHT
+        if indexPath.section == 0 {
+            return indexPath.row % 2 == 0 ? UITableViewAutomaticDimension : IMAGE_HEIGHT
+        }
+        else {
+            let ingredient = recipe!.ingredients!.elements[indexPath.row]
+            let text = ingredient.title + ingredient.unit
+            return text.heightWithConstrainedWidth() + 16
+        }
     }
 }

@@ -47,4 +47,10 @@ extension String {
         return modifiedString.components(separatedBy: stop)
     }
     
+    func heightWithConstrainedWidth(width: CGFloat = Screen.WIDTH, font: UIFont = UIFont.systemFont(ofSize: 13.0)) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        
+        return boundingBox.height
+    }
 }
