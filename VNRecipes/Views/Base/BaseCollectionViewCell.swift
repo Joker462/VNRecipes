@@ -13,5 +13,8 @@ class BaseCollectionViewCell: UICollectionViewCell {
     func configureCell<T>(anyItem: T) {
         
     }
-    
+}
+
+@objc protocol CollectionViewCellDelegate: class {
+    @objc optional func seleted(indexPath: IndexPath)
 }

@@ -25,5 +25,8 @@ class BaseTableViewCell: UITableViewCell {
     func configureCell<T>(anyItem: T) {
         
     }
-    
+}
+
+@objc protocol TableViewCellDelegate: class {
+    @objc optional func selected(indexPath: IndexPath)
 }
